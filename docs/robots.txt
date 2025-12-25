@@ -12,3 +12,5 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+Sitemap: https://psychologist-maryna.lovable.app/sitemap.xml
