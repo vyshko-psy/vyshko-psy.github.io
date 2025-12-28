@@ -4,8 +4,8 @@
   "description": "Професійна психологічна допомога. Індивідуальні та парні консультації, робота з тривогою, депресією, травмами.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#FAF8F5",
-  "theme_color": "#5A8F7B",
+  "background_color": "#161f1c",
+  "theme_color": "#161f1c",
   "icons": [
     {
       "src": "/favicon-16x16.png",
