@@ -1,0 +1,35 @@
+name: Copy news to docs
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'news.md'
+      - 'docs/**'
+
+jobs:
+  copy-news:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Copy news.md to docs
+        run: |
+          if [ -f news.md ]; then
+            cp news.md docs/news.md
+            echo "Copied news.md to docs/"
+          else
+            echo "news.md not found, skipping"
+          fi
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/news.md
+          git diff --cached --quiet || git commit -m "chore: sync news.md to docs"
+          git push
