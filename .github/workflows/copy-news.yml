@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - 'news.md'
+      - 'README_NEWS.md'
       - 'docs/**'
 
 jobs:
