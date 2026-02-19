@@ -17,13 +17,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Copy news.md to docs
+      - name: Copy README_NEWS.md to docs
         run: |
-          if [ -f news.md ]; then
-            cp news.md docs/news.md
+          if [ -f README_NEWS.md ]; then
+            cp README_NEWS.md docs/README_NEWS.md
             echo "Copied news.md to docs/"
           else
-            echo "news.md not found, skipping"
+            echo "README_NEWS.md not found, skipping"
           fi
 
       - name: Commit and push
