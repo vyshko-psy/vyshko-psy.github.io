@@ -1,35 +1,35 @@
-name: Copy news to docs
+# name: Copy news to docs
 
-on:
-  push:
-    branches: [main]
-    paths:
-      - 'README_NEWS.md'
-      - 'docs/**'
+# on:
+#   push:
+#     branches: [main]
+#     paths:
+#       - 'README_NEWS.md'
+#       - 'docs/**'
 
-jobs:
-  copy-news:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
+# jobs:
+#   copy-news:
+#     runs-on: ubuntu-latest
+#     permissions:
+#       contents: write
 
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v4
 
-      - name: Copy README_NEWS.md to docs
-        run: |
-          if [ -f README_NEWS.md ]; then
-            cp README_NEWS.md docs/README_NEWS.md
-            echo "Copied news.md to docs/"
-          else
-            echo "README_NEWS.md not found, skipping"
-          fi
+#       - name: Copy README_NEWS.md to docs
+#         run: |
+#           if [ -f README_NEWS.md ]; then
+#             cp README_NEWS.md docs/README_NEWS.md
+#             echo "Copied news.md to docs/"
+#           else
+#             echo "README_NEWS.md not found, skipping"
+#           fi
 
-      - name: Commit and push
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs/README_NEWS.md
-          git diff --cached --quiet || git commit -m "chore: sync README_NEWS.md to docs"
-          git push
+#       - name: Commit and push
+#         run: |
+#           git config user.name "github-actions[bot]"
+#           git config user.email "github-actions[bot]@users.noreply.github.com"
+#           git add docs/README_NEWS.md
+#           git diff --cached --quiet || git commit -m "chore: sync README_NEWS.md to docs"
+#           git push
