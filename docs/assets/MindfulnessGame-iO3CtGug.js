@@ -1,4 +1,4 @@
-import{u as O,r as t,j as e,X as L}from"./index-DZoIBbke.js";const l=4e3,$=4e3,d=6e3,P=l+$+d,R=6e4;function U(n){return n==="inhale"||n==="hold"?170:90}function S(n){return n==="inhale"?`width ${l}ms cubic-bezier(0.25,0.46,0.45,0.94),
+import{u as O,r as t,j as e,X as L}from"./index-DQNTs9-t.js";const l=4e3,$=4e3,d=6e3,P=l+$+d,R=6e4;function U(n){return n==="inhale"||n==="hold"?170:90}function S(n){return n==="inhale"?`width ${l}ms cubic-bezier(0.25,0.46,0.45,0.94),
             height ${l}ms cubic-bezier(0.25,0.46,0.45,0.94),
             box-shadow ${l}ms ease`:n==="exhale"?`width ${d}ms cubic-bezier(0.25,0.46,0.45,0.94),
             height ${d}ms cubic-bezier(0.25,0.46,0.45,0.94),
