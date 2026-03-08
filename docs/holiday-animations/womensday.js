@@ -54,7 +54,7 @@ function createItem() {
   const el = document.createElement('div');
   el.className = 'hol-flower';
   const size = 22 + Math.random() * 24;
-  const duration = 14 + Math.random() * 12;
+  const duration = 20 + Math.random() * 16;
   const delay = Math.random() * -duration;
   const spin = 60 + Math.random() * 300;
   const scale = 0.7 + Math.random() * 0.6;
