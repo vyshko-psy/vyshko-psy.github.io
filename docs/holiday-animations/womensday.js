@@ -54,12 +54,12 @@ function createItem() {
   const el = document.createElement('div');
   el.className = 'hol-flower';
   const size = 22 + Math.random() * 24;
-  const duration = 9 + Math.random() * 9;
+  const duration = 14 + Math.random() * 12;
   const delay = Math.random() * -duration;
   const spin = 60 + Math.random() * 300;
   const scale = 0.7 + Math.random() * 0.6;
   const item = ALL_ITEMS[Math.floor(Math.random() * ALL_ITEMS.length)];
-  const peakOpacity = 0.7 + Math.random() * 0.3;
+  const peakOpacity = 0.4 + Math.random() * 0.25;
 
   // Spawn from different edges for more coverage
   const edge = Math.random();
