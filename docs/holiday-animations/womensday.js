@@ -107,7 +107,7 @@ export function start() {
   injectStyles();
   container = document.createElement('div');
   container.id = CONTAINER_ID;
-  container.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9999;overflow:hidden;transform:translateZ(0);isolation:isolate;';
+  container.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100lvh;pointer-events:none;z-index:9999;overflow:hidden;transform:translateZ(0);isolation:isolate;';
   for (let i = 0; i < MAX_ITEMS; i++) {
     container.appendChild(createItem());
   }
